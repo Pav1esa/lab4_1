@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Завдання</title>
+</head>
+<body>
+<script>
+function generateTriangularNumbersArray(n) {
+  return Array.from({ length: n }, (_, index) => (index + 1) * (index + 2) / 2);
+}
+function generateSquaredNumbersArray(n) {
+  return Array.from({ length: n }, (_, index) => (index + 1) ** 2);
+}
+const Treag = generateTriangularNumbersArray(10);
+const kvd = generateSquaredNumbersArray(10);
+const rez = Treag.concat(kvd);
+document.write(`Об'єднаний масив (rez): ${rez.join(" ")}<br>`);
+const sortedRez = rez.slice().sort((a, b) => b - a);
+document.write(`Відсортований масив (у зворотньому порядку): ${sortedRez.join(" ")}`);
+</script>
+</body>
+</html>
